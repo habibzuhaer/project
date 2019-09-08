@@ -1,14 +1,15 @@
 package com.web_app.springbootapp.model;
 
 import lombok.*;
-import org.hibernate.annotations.Table;
-
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
-@NoArgsConstructor @AllArgsConstructor
-@Getter @Setter @ToString @EqualsAndHashCode
+@Table(name = "user")
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString @EqualsAndHashCode
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
