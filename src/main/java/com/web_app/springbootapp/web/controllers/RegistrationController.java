@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/register")
 public class RegistrationController {
     @GetMapping
-    public String preparepRegistrationPage() {
-        return "/WEB-INF/views/registration-page.jsp";
+    public String preparepRegistration() {
+        return "/WEB-INF/views/registration.jsp";
     }
 
     @PostMapping
-    public String processRegistrationPage() {
+    public String processRegistration() {
         // TODO
         return "";
     }
