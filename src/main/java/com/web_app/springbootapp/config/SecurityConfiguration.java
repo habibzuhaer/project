@@ -13,6 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
     private DataSource dataSource;
 
     @Autowired
@@ -31,6 +32,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(passwordEncoder())
                 .usersByUsernameQuery("SELECT username, password, active FROM users WHERE username = ?")
                 .authoritiesByUsernameQuery("SELECT username, 'ROLE_USER' FROM users WHERE username = ?");
+
+        auth.inMemoryAuthentication()
+                .withUser("user").password("{noop}pass").roles("USER");
     }
 
     @Override
@@ -38,11 +42,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 //        super.configure(http);
         http.authorizeRequests()
                 .antMatchers("/register").anonymous()
+                .antMatchers("/login").anonymous()
+                .antMatchers("/logout").authenticated()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
+                .loginPage("/login")
+                .defaultSuccessUrl("/index.html")
                 .and()
                 .logout()
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/index.html")
                 .and()
                 .csrf()
                 .disable();

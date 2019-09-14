@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/registration")
+@RequestMapping("/register")
 public class RegistrationController {
 
     private UserRepository userRepository;
@@ -25,7 +25,7 @@ public class RegistrationController {
 
     @GetMapping
     public String preparepRegistrationPage() {
-        return "/WEB-INF/views/registration-form.jsp";
+        return "registration-page";
     }
 
     @PostMapping
@@ -34,11 +34,11 @@ public class RegistrationController {
                                           String firstName,
                                           String lastName) {
         User user = new User();
-        user.setPassword(password);
+        user.setPassword(passwordEncoder.encode(password));
         user.setUsername(username);
         user.setFirstName(firstName);
         user.setLastName(lastName);
-
+        user.setActive(true);
         userRepository.save(user);
         return "redirect:/index.html";
     }
