@@ -14,6 +14,12 @@
             </sec:authorize>
         </ul>
     </div>
+    <sec:authorize access="isAuthenticated()">
+        <div style="margin-right: 20px"></div>
+        <form class="form-inline mr-2 mt-3" method="get" action="/user-adverts">
+            <button class="btn btn-outline-primary" type="submit">Ogłoszenia</button>
+        </form>
+    </sec:authorize>
     <sec:authorize access="!isAuthenticated()">
         <div style="margin-right: 20px"> Witaj, <strong>nieznajomy</strong></div>
         <form class="form-inline mr-2 mt-3" method="get" action="/login">
