@@ -21,9 +21,10 @@ public class HomePageController {
     }
         @GetMapping
                 public String prepareHomePage(Model model){
-            List<Advert> allAdverts = advertRepository.findAllByOrderPostedDesc();
+            List<Advert> allAdverts = advertRepository.findAllByOrderByPostedDesc();
             model.addAttribute("adverts", allAdverts);
             return "home-page";
         }
 
 }
+
