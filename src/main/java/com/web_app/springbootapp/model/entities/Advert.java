@@ -88,7 +88,7 @@ public class Advert {
                 ", title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", posted=" + posted +
-                ", ownerId=" + ownerId +
+                ", ownerId=" + ownerId + '\'' +
                 '}';
     }
 }

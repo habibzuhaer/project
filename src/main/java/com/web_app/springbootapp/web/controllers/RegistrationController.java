@@ -24,7 +24,7 @@ public class RegistrationController {
     }
 
     @GetMapping
-    public String preparepRegistrationPage() {
+    public String prepareRegistrationPage() {
         return "registration-page";
     }
 

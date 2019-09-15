@@ -14,10 +14,11 @@
     <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
+<jsp:include page="fragments/main-menu.jsp"/>
 <div class="container">
 
     <sec:authorize access="isAuthenticated()">
-        <div class="row" style="margin-top: 40px; margin-bottom: 10px">
+        <div class="row" style="margin-top: 40px; margin-bottom: 10px" align="center">
             <div class="col-1"></div>
             <div class="col-6"><h2>Dodaj ogłoszenie</h2></div>
             <div class="col-5"></div>
@@ -57,12 +58,11 @@
         <div class="col-12" style="padding-bottom: 20px">
             <table>
                 <tr>
-                    <th>Lp.</th>
-                    <th>Tytuł</th>
-                    <th>Treść</th>
-                    <th>Autor</th>
-                    <th>Data dodania</th>
-                    <th> *** </th>
+                    <th class="home">Lp.</th>
+                    <th class="home">Tytuł</th>
+                    <th class="home">Treść</th>
+                    <th class="home">Autor</th>
+                    <th class="home">Data dodania</th>
                 </tr>
                 <c:forEach items="${adverts}" var="advert" varStatus="stat">
                     <tr>

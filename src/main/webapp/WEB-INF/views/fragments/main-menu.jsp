@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: lightskyblue">
-    <a class="navbar-bran mr-2" href="https://github.com/habibzuhaer">GitHub IT</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background:linear-gradient(to bottom, #b3ffb3 12%, #ffffff 100%)">
+    <a class="navbar-bran mr-2" href="https://github.com/habibzuhaer/project">GitHub IT</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav nav nav-pills nav-fill">
             <li class="nav-item active mx-1">

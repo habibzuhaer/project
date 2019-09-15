@@ -16,8 +16,9 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
-    <div class="row" style="margin-top: 40px">
+<jsp:include page="fragments/main-menu.jsp"/>
+<div class="container" >
+    <div class="row" style="margin-top: 40px" align="center">
         <div class="col-1"></div>
         <div class="col-10" style="padding-bottom: 20px"><h2>Rejestracja</h2></div>
         <div class="col-1"></div>
