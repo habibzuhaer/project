@@ -54,23 +54,23 @@
         <div class="col-5"></div>
     </div>
 
-    <div class="row">
+    <div class="row" style=" padding: 10px; border: 25px solid #f2f2f2; border-radius: 20px;">
         <div class="col-12" style="padding-bottom: 20px">
             <table>
                 <tr>
-                    <th class="home">Lp.</th>
-                    <th class="home">Tytuł</th>
-                    <th class="home">Treść</th>
-                    <th class="home">Autor</th>
-                    <th class="home">Data dodania</th>
+                    <th>Lp.</th>
+                    <th>Tytuł</th>
+                    <th>Treść</th>
+                    <th>Autor</th>
+                    <th>Data dodania</th>
                 </tr>
                 <c:forEach items="${adverts}" var="advert" varStatus="stat">
                     <tr>
-                        <td>${stat.count}</td>
-                        <td><b>${advert.title}</b></td>
-                        <td>${advert.description}</td>
-                        <td>${advert.owner.username}</td>
-                        <td>${advert.posted}</td>
+                        <td class="rtable">${stat.count}</td>
+                        <td class="rtable"><b>${advert.title}</b></td>
+                        <td class="rtable">${advert.description}</td>
+                        <td class="rtable">${advert.owner.username}</td>
+                        <td class="rtable">${advert.posted}</td>
                     </tr>
                 </c:forEach>
             </table>

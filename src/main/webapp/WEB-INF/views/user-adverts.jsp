@@ -19,7 +19,7 @@
         <div class="col-5"></div>
     </div>
 
-    <div class="row">
+    <div class="row" style="border-color: #b3ffb3; border-radius: 30px;">
         <div class="col-12" style="padding-bottom: 20px">
             <table>
                 <tr>
